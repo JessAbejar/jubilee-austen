@@ -1,62 +1,69 @@
 /***** BASE STYLES *****/
-
+html {
+    text-align: center;
+}
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-#about, #work, #contact {
-    height: 600px;
+figure {
+    width: 100%;
+    margin: 0 auto;
+}
+img {
+    width: 100%;
 }
 
 /***** GRID *****/
-
-.full-width {
-    width: 1200px;
-    margin: 0 auto;
+.flex-container {
+    width: 100%;
+    display: flex;
 }
 .half-width {
-    width: 600px;
+    width: 100%;
     float: left;
 }
 .third-width {
-    width: 400px;
+    width: 100%;
     float: left;
 }
 
 /***** HEADER *****/
 
-header {
-    height: 800px;
-    background-image: url('../img/full-background.png');
-    background-size: cover;
-}
 header h1 {
-    padding: 50px 0;
     font-family: 'Lora', serif;
     color: #BBC085;
-    font-size: 30px;
+    font-size: 2rem;
 }
 nav {
-    float: right;
-    padding: 75px 40px;
+    margin: 0 auto;
+}
+nav ul {
+    padding: 0;
 }
 nav ul li {
-    display: inline-block;
+    display: inline;
 }
 nav ul li a {
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1rem;
     color: #828282;
-    padding-left: 80px;
+    padding: 0 0.5rem;
+}
+.header-bkgd {
+    width: 100%;
 }
 header h2 {
-    width: 1000px;
     clear: both;
     font-family: 'Lora', serif;
-    font-size: 72px;
-    line-height: 80px;
+    font-size: 2rem;
     color: #9b9b9b;
-    padding: 20px 0;
 }
 header h2 span {
     color: #2b2b2b;
@@ -154,4 +161,33 @@ header h2 span {
 }
 #contact ul img {
     padding-right: 48px;
+}
+
+/** TABLET (>768px and <940px) **/
+@media all and (min-width: 768px) {
+    html {
+        text-align: left;
+    }
+    nav {
+        float: right;
+        padding: 75px 40px;
+    }
+    nav ul li {
+        display: inline-block;
+    }
+    nav ul li a {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 18px;
+        color: #828282;
+        padding-left: 80px;
+    }
+}
+
+/** DESKTOP (940px) **/
+@media all and (min-width: 940px) {
+    #about, #work, #contact {
+        height: 600px;
+    }
+
 }
