@@ -25,23 +25,25 @@
                     </ul>
                 </nav>
             </div>
-
-                <div class="header-bkgd">
-                    <figure class="hero-img"><img src="img/full-background.png" alt="Minimal desk setting"></figure>
-                </div>
+            <div class="container" id="header-container">
                 <div class="callout">
                     <h2><span>Hi,</span> I'm a  developer that loves clean &amp; elegant code.</h2>
                 </div>
+                <div class="header-bkgd">
+                    <figure class="hero-img"><img src="img/full-background.png" alt="Minimal desk setting"></figure>
+                </div>
+            </div>    
         </header>
 
         <!--Main Section-->
         <main>
             <!--About Section-->
             <section id="about">
+            <div class="about-flex-container">
                 <div class="heading">
                     <h2>A little bit about me.</h2>
                 </div>
-                <div class="flex-container">
+                <div class="flex-container" id="bio">
                     <div class="half-width">
                         <p>I’ve made my home base in Providence, Rhode Island, with my small growing family. My journey into tech started with a degree in journalism. As I started sharing my writing online, I was fascinated with how easily I could get my voice out there. I was hooked and wanted to learn how to build my own site to fit my own specific needs.</p>
                     </div>
@@ -49,24 +51,27 @@
                         <p>That curiosity then opened a door that could never be shut. When I learned how to build my first website, I realized I found something that gave me the freedom &amp; versatility I was looking for in my work. Now I’ve made a full switch to front-end development, where I can use my organization skills and eye for detail to write clean, elegant code.</p>
                     </div>                    
                 </div>
+            </div>
             </section>
 
             <!--Work Section-->
             <section class="flex-container" id="work">
-                <div class="third-width">
-                    <i class="far fa-file-code"></i>
-                    <h3>Hand-Coded HTML</h3>
-                    <p>My focus is writing clean, well-formatted, semantic HTML5 by hand to make sure that the content is easy to read, easy to collaborate, trouble-shoot and accessible.</p>
-                </div>
-                <div class="third-width">
-                    <i class="fab fa-css3"></i>
-                    <h3>Well-Organized CSS</h3>
-                    <p>I pride myself on writing CSS that is easy to read and build on. I focus on keeping my CSS lean and fast to load, and I make it a habit to stay up to date on current best practices.</p>
-                </div>
-                <div class="third-width">
-                    <i class="fas fa-pencil-alt"></i>
-                    <h3>Ease Converting Designs into Code</h3>
-                    <p>You can trust me to take a designer’s PSD and quickly &amp; accurately convert it into a webpage that is pixel-perfect match.</p>
+                <div class="work-flex-container">
+                    <div class="third-width">
+                        <i class="far fa-file-code"></i>
+                        <h3>Hand-Coded HTML</h3>
+                        <p>My focus is writing clean, well-formatted, semantic HTML5 by hand to make sure that the content is easy to read, easy to collaborate, trouble-shoot and accessible.</p>
+                    </div>
+                    <div class="third-width">
+                        <i class="fab fa-css3"></i>
+                        <h3>Well-Organized CSS</h3>
+                        <p>I pride myself on writing CSS that is easy to read and build on. I focus on keeping my CSS lean and fast to load, and I make it a habit to stay up to date on current best practices.</p>
+                    </div>
+                    <div class="third-width">
+                        <i class="fas fa-pencil-alt"></i>
+                        <h3>Ease Converting Designs into Code</h3>
+                        <p>You can trust me to take a designer’s PSD and quickly &amp; accurately convert it into a webpage that is pixel-perfect match.</p>
+                    </div>
                 </div>
             </section>
 
@@ -74,9 +79,9 @@
         </main>
 
         <!--Footer-->
-        <footer class="flex-container" id="contact">
+        <footer id="contact">
             <div class="half-width">
-                <figure><img src="img/contact-image.png" alt="Contact Image" /></figure>
+                <figure><img src="img/contact-image.png" alt="Contact Image" id="contact-img"/></figure>
             </div>
             <div class="half-width">
                 <div class="contact-info">

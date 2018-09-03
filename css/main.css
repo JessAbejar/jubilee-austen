@@ -18,30 +18,58 @@ figure {
 img {
     width: 100%;
 }
-
-/***** GRID *****/
-.flex-container {
-    width: 100%;
-    display: flex;
-}
-.half-width {
-    width: 100%;
-    float: left;
-}
-.third-width {
-    width: 100%;
-    float: left;
-}
-
-/***** HEADER *****/
-
-header h1 {
+h1 {
     font-family: 'Lora', serif;
     color: #BBC085;
     font-size: 2rem;
 }
-nav {
-    margin: 0 auto;
+h2 {
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+p {
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+}
+
+
+/***** GRID *****/
+.flex-container, #contact {
+    width: 100%;
+    display: -webkit-box; 
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: column;
+    -moz-box-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+.container {
+    width: 100%;
+}
+header {
+    padding-top: 2rem;
+}
+section {
+    padding: 1rem;
+}
+.half-width {
+    width: 100%;
+}
+.third-width {
+    width: 100%;
+}
+
+/***** HEADER *****/
+.callout {
+    padding: 1rem;
 }
 nav ul {
     padding: 0;
@@ -56,34 +84,20 @@ nav ul li a {
     color: #828282;
     padding: 0 0.5rem;
 }
-.header-bkgd {
-    width: 100%;
-}
-header h2 {
-    clear: both;
-    font-family: 'Lora', serif;
-    font-size: 2rem;
+.callout h2 {
     color: #9b9b9b;
 }
-header h2 span {
+.callout h2 span {
     color: #2b2b2b;
 }
 
 /***** ABOUT *****/
-
-#about .full-width {
-    padding: 80px 0;
-}
-#about h2 {
-    font-family: 'Lora', serif;
-    font-size: 36px;
+#bio.flex-container {
+    padding: 0;
 }
 
 #about p {
-    font-size: 21px;
     color: #7f7f7f;
-    line-height: 40px;
-    padding-right: 50px;
 }
 
 /***** WORK *****/
@@ -92,75 +106,50 @@ header h2 span {
     background-color: #f9ceb7;
     text-align: center;
 }
-#work .full-width {
-    padding: 115px 0;
-}
-#work img {
-    padding-bottom: 30px;
+#work i {
+    font-size: 3rem;
+    padding: 1rem;
+    color: #C49075;
 }
 #work h3 {
-    font-size: 24px;
     margin: 0 auto;
-    line-height: 32px;
-    width: 190px;
+    width: 70%;
 }
 #work p {
     font-family: 'Lora', serif;
-    font-size: 18px;
-    line-height: 30pt;
+    font-size: 1.1rem;
+    line-height: 2.2rem;
     color: #2b2b2b;
-    padding: 0 35px;
 }
 
 /***** CONTACT *****/
-
 #contact {
     background-color: #ebebeb;
 }
-#contact .full-width {
-    padding: 110px 0;
-}
-#contact-img {
-    border: 12px solid #ffffff;
-}
-#contact h2, #email-header, #socialmedia-header, #contact ul {
-    padding-left: 115px;
-}
-#envelope {
-    padding: 0 10px 0 115px;
-}
-#contact h2 {
-    font-family: 'Lora', serif;
-    font-size: 36px;
-    line-height: 44px;
-}
 #email-header {
-    font-size: 32px;
-    line-height: 44px;
+    font-size: 1.5rem;
+    line-height: 2.75rem;
     font-weight: 400;
-    margin: -30px 0 5px 0;
     color: #2b2b2b;
 }
 #socialmedia-header {
     font-weight: bold;
-    font-size: 29px;
-    line-height: 44px;
-    margin: 40px 0 0 0;
+    font-size: 1.4rem;
+    line-height: 2.75rem;
 }
 #contact a {
     text-decoration: none;
     color: #C49075;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 1.4rem;
 }
 #contact ul {
     list-style: none;
+    padding: 0;
 }
 #contact ul li {
     display: inline-block;
-}
-#contact ul img {
-    padding-right: 48px;
+    padding: 0.5rem;
 }
 
 /** TABLET (>768px and <940px) **/
@@ -168,9 +157,32 @@ header h2 span {
     html {
         text-align: left;
     }
-    nav {
-        float: right;
-        padding: 75px 40px;
+    .flex-container, #contact {
+        -webkit-box-direction: row;
+        -moz-box-direction: row;
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        -ms-flex-item-align: center;
+        -webkit-align-items: center; 
+        align-items: center;
+        -webkit-box-pack: space-between;
+        -moz-box-pack: space-between;
+        -ms-flex-pack: space-between;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        padding: 0 2rem;
+    }
+    section {
+        padding: 2rem;
+    }
+    .half-width {
+        width: 48%;
+    }
+    h1 {
+        font-size: 2.3rem;
     }
     nav ul li {
         display: inline-block;
@@ -182,12 +194,81 @@ header h2 span {
         color: #828282;
         padding-left: 80px;
     }
+    #header-container {
+        background: url("../img/full-background.png") no-repeat center;
+        background-size: cover;
+        height: 400px;
+    }
+    .header-bkgd {
+        display: none;
+    }
+    .callout {
+        width: 75%;
+        padding: 2rem;
+    }
+    .callout h2 {
+        font-size: 3rem;
+    }
+    .about-flex-container {
+        -webkit-box-direction: column;
+        -moz-box-direction: column;
+        -ms-flex-direction: column;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+    .work-flex-container {
+        display: -webkit-box; 
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: start;
+        -moz-box-align: start;
+        -ms-flex-item-align: start;
+        -webkit-align-items: flex-start; 
+        align-items: flex-start;
+        -webkit-box-direction: row;
+        -moz-box-direction: row;
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+    }
+    h3 {
+        font-size: 1.3rem;
+    }
+    #work p {
+        padding: 0 1.2rem;
+    }
+    #contact-img {
+        border: 1rem solid #ffffff;
+    }
 }
 
 /** DESKTOP (940px) **/
 @media all and (min-width: 940px) {
     #about, #work, #contact {
         height: 600px;
+        display: -webkit-box; 
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        -ms-flex-item-align: center;
+        -webkit-align-items: center; 
+        align-items: center;
     }
-
+    #header-container {
+        background: url("../img/full-background.png") no-repeat center;
+        background-size: cover;
+        height: 600px;
+    }
+    .callout {
+        width: 70%;
+    }
+    .third-width {
+        width: 33%;
+        padding: 1rem;
+    }
 }
