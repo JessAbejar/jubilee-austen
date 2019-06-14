@@ -1,7 +1,4 @@
 /***** BASE STYLES *****/
-html {
-    text-align: center;
-}
 * {
     box-sizing: border-box;
 }
@@ -11,6 +8,21 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
+header {
+    padding-top: 2rem;
+}
+section {
+    padding: 2rem 1rem;
+}
+.heading-text {
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    width: 100%;
+}
+p {
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+}
 figure {
     width: 100%;
     margin: 0 auto;
@@ -18,58 +30,17 @@ figure {
 img {
     width: 100%;
 }
-h1 {
+/***** HEADER *****/
+#header-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.site-title {
     font-family: 'Lora', serif;
     color: #BBC085;
     font-size: 2rem;
-}
-h2 {
-    font-family: 'Lora', serif;
-    font-size: 2rem;
-}
-h3 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-}
-p {
-    font-size: 1.3rem;
-    line-height: 2.5rem;
-}
-
-
-/***** GRID *****/
-.flex-container, #contact {
-    width: 100%;
-    display: -webkit-box; 
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-direction: column;
-    -moz-box-direction: column;
-    -ms-flex-direction: column;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-}
-.container {
-    width: 100%;
-}
-header {
-    padding-top: 2rem;
-}
-section {
-    padding: 1rem;
-}
-.half-width {
-    width: 100%;
-}
-.third-width {
-    width: 100%;
-}
-
-/***** HEADER *****/
-.callout {
-    padding: 1rem;
 }
 nav ul {
     padding: 0;
@@ -84,55 +55,78 @@ nav ul li a {
     color: #828282;
     padding: 0 0.5rem;
 }
-.callout h2 {
-    color: #9b9b9b;
+#header-img {
+    width: 100%;
 }
-.callout h2 span {
+#intro-text {
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    color: #9b9b9b;
+    padding: 1rem;
+}
+#intro-text span {
     color: #2b2b2b;
 }
-
 /***** ABOUT *****/
-#bio.flex-container {
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#about-text {
+    display: flex;
+    flex-direction: column;
+}
+.about-col {
     padding: 0;
-}
-
-#about p {
     color: #7f7f7f;
+    width: 100%;
 }
-
 /***** WORK *****/
-
 #work {
     background-color: #f9ceb7;
     text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 }
-#work i {
+.work-item {
+    color: #2b2b2b;
+    padding: 1rem;
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    line-height: 2.2rem;
+}
+.work-icon {
     font-size: 3rem;
     padding: 1rem;
     color: #C49075;
 }
-#work h3 {
-    margin: 0 auto;
-    width: 70%;
+.work-heading {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5rem;
+    line-height: 2rem;
 }
-#work p {
-    font-family: 'Lora', serif;
-    font-size: 1.1rem;
-    line-height: 2.2rem;
-    color: #2b2b2b;
-}
-
 /***** CONTACT *****/
 #contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #ebebeb;
 }
-#email-header {
+#contact-info {
+    padding: 1rem;
+}
+#email-heading {
     font-size: 1.5rem;
     line-height: 2.75rem;
     font-weight: 400;
     color: #2b2b2b;
 }
-#socialmedia-header {
+#social-heading {
     font-weight: bold;
     font-size: 1.4rem;
     line-height: 2.75rem;
@@ -151,124 +145,123 @@ nav ul li a {
     display: inline-block;
     padding: 0.5rem;
 }
-
-/** TABLET (>768px and <940px) **/
-@media all and (min-width: 768px) {
-    html {
-        text-align: left;
-    }
-    .flex-container, #contact {
-        -webkit-box-direction: row;
-        -moz-box-direction: row;
-        -ms-flex-direction: row;
-        -webkit-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-align: center;
-        -moz-box-align: center;
-        -ms-flex-item-align: center;
-        -webkit-align-items: center; 
-        align-items: center;
-        -webkit-box-pack: space-between;
-        -moz-box-pack: space-between;
-        -ms-flex-pack: space-between;
-        -webkit-justify-content: space-between;
-        justify-content: space-between;
-        padding: 0 2rem;
-    }
+/****** TABLET ******/
+@media screen and (min-width: 768px) {
     section {
         padding: 2rem;
     }
-    .half-width {
-        width: 48%;
+    #header-nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2rem;
     }
-    h1 {
+    .site-title {
         font-size: 2.3rem;
     }
-    nav ul li {
-        display: inline-block;
-    }
     nav ul li a {
-        text-transform: uppercase;
-        text-decoration: none;
-        font-size: 18px;
-        color: #828282;
-        padding-left: 80px;
+        font-size: 1.125rem;
+        padding-left: 5rem;
     }
-    #header-container {
+    #header-img {
         background: url("../img/full-background.png") no-repeat center;
         background-size: cover;
         height: 400px;
     }
-    .header-bkgd {
+    #hero-img {
         display: none;
     }
-    .callout {
+    #intro-text {
         width: 75%;
         padding: 2rem;
     }
-    .callout h2 {
-        font-size: 3rem;
-    }
-    .about-flex-container {
-        -webkit-box-direction: column;
-        -moz-box-direction: column;
-        -ms-flex-direction: column;
-        -webkit-flex-direction: column;
-        flex-direction: column;
-    }
-    .work-flex-container {
-        display: -webkit-box; 
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-align: start;
-        -moz-box-align: start;
-        -ms-flex-item-align: start;
-        -webkit-align-items: flex-start; 
-        align-items: flex-start;
-        -webkit-box-direction: row;
-        -moz-box-direction: row;
-        -ms-flex-direction: row;
-        -webkit-flex-direction: row;
+    #about-text {
         flex-direction: row;
+        justify-content: space-between;
     }
-    h3 {
+    .about-col {
+        width: 48%;
+    }
+    #work {
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    .work-heading {
         font-size: 1.3rem;
+        width: 70%;
+        margin: auto;
     }
-    #work p {
-        padding: 0 1.2rem;
+    .work-item {
+        width: 45%;
+    }
+    #contact {
+        flex-direction: row;
+        align-items: center;
+        padding: 2rem;
+        justify-content: space-evenly;
     }
     #contact-img {
+        flex-basis: 55%;
         border: 1rem solid #ffffff;
+        margin: 0;
+    }
+    #contact-info {
+        flex-basis: 45%;
+    }
+    #email-heading {
+        font-size: 1.4rem;
+        line-height: 2.75rem;
+    }
+    #social-heading {
+        font-size: 1.2rem;
+        line-height: 2.75rem;
+    }
+    #contact a {
+        font-size: 1.2rem;
     }
 }
-
-/** DESKTOP (940px) **/
-@media all and (min-width: 940px) {
-    #about, #work, #contact {
-        height: 600px;
-        display: -webkit-box; 
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-align: center;
-        -moz-box-align: center;
-        -ms-flex-item-align: center;
-        -webkit-align-items: center; 
-        align-items: center;
-    }
-    #header-container {
-        background: url("../img/full-background.png") no-repeat center;
-        background-size: cover;
+/****** LARGE TABLET / SMALL DESKTOP  ******/
+@media screen and (min-width: 940px) {
+    section,
+    #header-img,
+    #contact {
         height: 600px;
     }
-    .callout {
+    #intro-text {
+        font-size: 3rem;
+    }
+    #work {
+        flex-flow: row nowrap;
+    }
+    .work-item {
+        width: 30%;
+    }
+    #contact-img {
+        flex-basis: 45%;
+        border: 1rem solid #ffffff;
+        margin: 0;
+    }
+    #contact-info {
+        flex-basis: 35%;
+    }
+}
+/****** DESKTOP ******/
+@media screen and (min-width: 1200px) {
+    #intro-text {
         width: 70%;
     }
-    .third-width {
-        width: 33%;
-        padding: 1rem;
+    .work-item {
+        width: 28%;
+    }
+    #email-heading {
+        font-size: 1.5rem;
+        line-height: 2.75rem;
+    }
+    #social-heading {
+        font-size: 1.4rem;
+        line-height: 2.75rem;
+    }
+    #contact a {
+        font-size: 1.4rem;
     }
 }
